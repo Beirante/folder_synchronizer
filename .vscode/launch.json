@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Sincronizador",
+            "type": "debugpy",  // Corrigido para a nova configuração
+            "request": "launch",
+            "program": "${workspaceFolder}/synchronizer.py",  // Apontando para o script correto
+            "console": "integratedTerminal",
+            "args": [
+                "${workspaceFolder}/source_folder",  // Caminho para a pasta source
+                "${workspaceFolder}/replica_folder",  // Caminho para a pasta replica
+                "30",  // Intervalo em segundos
+                "${workspaceFolder}/logfile.log",  // Caminho do arquivo de log
+                "--use-md5",  // Habilitar verificação MD5
+                "--log-level",
+                "DEBUG"  // Nível de log detalhado
+            ]
+        }
+    ]
+}
